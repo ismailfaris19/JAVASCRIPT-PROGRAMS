@@ -1,3 +1,9 @@
+// import a properties and methods from other js file using require methods.
+
+// const importValue = require('./JSLooping');
+// const getValue = importValue.add(5, 6);
+// console.log(getValue);
+
 /* if we want to use the import statement, 
 we need to change the extension to .mjs(js module) 
 of both the files which we want to import and export 
@@ -22,6 +28,33 @@ or set "type": "module" in the package.json. */
 // const getResult = add(5, 5);
 // console.log(getResult);
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* File System */
+
+const fs = require("fs");
+
+// read a file...
+// fs.readFile('new.js', 'utf8', (err, data) => {
+//     console.log(data);
+// });
+
+// write a file...(Replace whole content in that file)
+// fs.writeFile('new.js', 'console.log("saved!!!");', (err) => {
+//     console.log('saved');
+// })
+
+// append a file...(It won't replace anything. It will add to the existing content')
+// fs.appendFile('new.js', 'console.log("saved!!!");', (err) => {
+//     console.log('saved');
+// })
+
+// delete a file...
+// fs.unlink('new.js', (err) => {
+//     console.log('deleted');
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // To print a double quotes and single quotes in our string statements:
 
@@ -469,9 +502,9 @@ let sum = (() => {
 
                 // (or)
 
-    return function sum(...args){ // rest operator get all parameters and form it as array.
-        return args.reduce((x, y) => x + y, 0);
-    };
+    // return function sum(...args){ // rest operator get all parameters and form it as array.
+    //     return args.reduce((x, y) => x + y, 0);
+    // };
 })();
 
 // console.log(sum(4, 5, 6));
@@ -492,7 +525,10 @@ arr1[0] = 0;
 
 /* object tricks */
 
+const strOne = 'hello world';
+
 var obj1 = {
+    valOne,
     x: 1,
     y: 2,
     z: { a : 3, b : 4, c : 5 },
@@ -502,6 +538,7 @@ var obj1 = {
     }
 };
 
+// console.log(obj1);
 const { x : u , y : v } = obj1; // assign object value to variable
 // console.log(u, v);
 const {x, y} = obj1;
@@ -678,3 +715,212 @@ const setObj = {
 // console.log(favouriteList[0]);
 // console.log(favouriteList[0][objName][1]['author']);
 // console.log(Object.keys(favouriteList[0])); // for getting keys
+
+/* Airbnb JS Exercises */
+
+
+// OBJECT
+
+// very bad
+// const original = { a: 1, b: 2 };
+// const copy = Object.assign(original, { c: 3 }); // this mutates `original` ಠ_ಠ
+// delete copy.a; // so does this
+
+// bad
+// const original = { a: 1, b: 2 };
+// const copy = Object.assign({}, original, { c: 3 }); // copy => { a: 1, b: 2, c: 3 }
+// delete copy.a;
+
+// good
+const original = { e: 1, b: 2 };
+const copy = { ...original, c: 3 }; // copy => { a: 1, b: 2, c: 3 }
+const { e, ...noA } = copy; // noA => { b: 2, c: 3 }
+// console.log(noA);
+
+// console.log(original);
+// console.log(copy);
+
+const setPropToObj = {
+    author: 'Jack',
+    role: 'Admin'
+}
+function getPropFromObj({author}){
+    console.log(author);
+}
+
+// getPropFromObj(setPropToObj);
+
+
+// ARRAY
+
+/* Use Array.from for converting an object to an array. */
+
+const arrLike = { 0: 'foo', 1: 'bar', 2: 'baz', length: 3 };
+
+// bad
+// const arrAy = Array.prototype.slice.call(arrLike);
+
+// good
+const arrAy = Array.from(arrLike);
+// console.log(arrAy);
+
+const foo = "12345"; 
+const fb = Array.from(foo); // convert from string to array.
+// console.log(fb);
+
+// function arrayFromArgs() {
+    function arrayFromArgs(...args) {
+    // var results = [];
+    // // we can get arguments without giving parameter names using arguments keyword.
+    // for (var i = 0; i < arguments.length; i++) { 
+    //     results.push(arguments[i]);
+    // }
+    // return results;
+
+                // (or)
+
+    // return Array.prototype.slice.call(arguments);
+
+                // (or)
+
+    // return Array.from(arguments);
+
+                // (or)
+
+    // return Array.from(arguments, x => x * 2);
+
+                // (or)
+
+    // return args;
+}
+// var fruits = arrayFromArgs('Apple', 'Orange', 'Banana');
+// console.log(fruits);
+var numbers = arrayFromArgs(1, 2, 3);
+// console.log(numbers);
+
+
+const inbox = [
+{
+    author: 'John',
+    subject: 'Tamil'
+},
+{
+    author: 'Jack',
+    subject: 'English'
+},
+{
+    author: 'Jil',
+    subject: 'Maths'
+},
+];
+
+const getRecords = inbox.filter(msg => {
+    const {author, subject} = msg;
+    if(subject === 'Maths'){
+        return author === 'Jack';
+    }
+        
+    return false;
+});
+
+// console.log(getRecords);
+
+
+// good
+// const arr = [[0, 1], [2, 3], [4, 5]];
+
+// const objectInArray = [
+//   {
+//     id: 1,
+//   },
+//   {
+//     id: 2,
+//   },
+// ];
+
+// const numberInArray = [
+//   1,
+//   2,
+// ];
+
+
+// PROTOTYPE
+
+function conFun(first, second) {
+    this.firstName = first;
+    this.lastName = second;
+}
+
+let getCon = new conFun('ismail', 'faris');
+// to add a new property to constructor function using prototype.
+conFun.prototype.nationality = 'indian'; 
+// console.log(getCon.firstName + ' ' + getCon.lastName + ' ' + getCon.nationality);
+
+
+// STRINGS
+
+function NWH(name){
+    return `Hello ${name}`;
+}
+
+// console.log(NWH('Peter'));
+
+
+// FUNCTIONS
+
+const fix = [1, 2, 3, 4, 5];
+// console.log(...fix);
+
+
+// ITERATORS
+
+const increasedByOne = fix.map((num) => num + 1);
+// console.log(increasedByOne);
+
+const sumWithReduce = fix.reduce((total, num) => total + num, 0);
+// console.log(sumWithReduce);
+
+
+// GENERATORS
+
+function* generator() {
+    console.log('hello');
+    yield 1;
+    console.log('hi');
+    yield 2;
+}
+
+// let gen = generator();
+// let genResult = gen.next();
+// console.log(genResult);
+// genResult = gen.next();
+// console.log(genResult);
+// genResult = gen.next();
+// console.log(genResult);
+
+
+
+/* TYPE CONVERSION */
+
+const inputValue = '4';
+// const val = Number(inputValue);
+const val = parseInt(inputValue, 10);
+// console.log(val);
+
+const giveAge = 1;
+// const hasAge = Boolean(giveAge);
+const hasAge = !!giveAge;
+// console.log(hasAge);
+
+
+
+/* CONSOLE TABLE */
+
+const userTable = [{ fname: 'Ismail', lname: 'Faris' }, { fname: 'Gowtham', lname: 'Mariappan' }, { fname: 'Ishaq', lname: 'Ahamed' }];
+// const user1 = { fname: 'Ismail', lname: 'Faris' };
+// const user2 = { fname: 'Gowtham', lname: 'Mariappan' };
+// const user3 = { fname: 'Ishaq', lname: 'Ahamed' };
+
+
+// console.table([user1, user2, user3]);
+// console.table(userTable);
