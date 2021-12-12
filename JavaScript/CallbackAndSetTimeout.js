@@ -1,3 +1,18 @@
+// Sequence Control:
+
+// function callbackFunction(value) {
+//     console.log(value);
+// }
+
+// function shareValue(one, two) {
+//     let result = one + two;
+//     return result;
+// }
+
+// let total = shareValue(4, 6);
+// callbackFunction(total);
+
+
 // callback function:
 
 // function callbackFunction(value) {
