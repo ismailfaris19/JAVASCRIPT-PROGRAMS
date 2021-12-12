@@ -14,4 +14,14 @@
 // export const one = "faris";
 // export const two = 'ismail';
 
-export default function add(x, y) { return x + y }
+// export default function add(x, y) { return x + y }
+
+// function add(a, b){
+//     return a + b;
+// }
+
+// module.exports.add = add;
+        // (or)
+// exports.add = function add(a, b){
+//         return a + b;
+// }
