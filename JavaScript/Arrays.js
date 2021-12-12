@@ -1,5 +1,7 @@
 const numbers = [33, 12,70 ,20,20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
+// console.log(numbers.map(val => val * 2));
+
 let players =[
   {name:'Rohit', runs:9000, wickets:100, age:36},
 {name:'Dhawan', runs:1100, wickets:101, age:30},
@@ -209,21 +211,21 @@ arrSix.name = "Orange";
 
 // 1)
 
-for (let i = 0; i < arrTwo.length; i++) {
-    console.log(arrTwo[i]);
-}
+// for (let i = 0; i < arrTwo.length; i++) {
+//     console.log(arrTwo[i]);
+// }
 
 // 2)
 
-for(let duplicateArray of arrTwo) {
-    console.log(duplicateArray);
-}
+// for(let duplicateArray of arrTwo) {
+//     console.log(duplicateArray);
+// }
 
 // 3)
 
-for(let arrayDuplicate in arrTwo) {
-    console.log(arrTwo[arrayDuplicate]);
-}
+// for(let arrayDuplicate in arrTwo) {
+//     console.log(arrTwo[arrayDuplicate]);
+// }
 
 // Multidimensional arrays:
 
@@ -254,3 +256,9 @@ let arrSeven = [1,2,3,4,5,6,7,8,9,10,11];
 // map():
 
 // console.log(arrSeven.map(arr => arr + arr));
+
+// from():
+
+let text = 'abcdef';
+let arr = Array.from(text);
+// console.log(arr);
