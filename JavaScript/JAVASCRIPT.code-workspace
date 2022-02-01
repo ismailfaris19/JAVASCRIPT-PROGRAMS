@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "..\\ReactJS\\react-for-beginners-2022"
+		},
+		{
+			"path": "..\\CSSAndBootstrap"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"liveServer.settings.multiRootWorkspaceName": "JavaScript"
+	}
+}

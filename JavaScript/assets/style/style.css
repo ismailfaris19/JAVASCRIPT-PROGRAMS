@@ -1,0 +1,352 @@
+body{
+    margin-top: 10px;
+    background-color: #bde0fe;
+}
+
+/* div {
+    display: flex;
+    margin: .5rem;
+    padding: 3rem;
+    border: 3px solid #000;
+    min-height: 1rem;
+    flex-grow: 1;
+} */
+
+/* div {
+    display: flex;
+    margin: .5rem;
+    padding: 1rem;
+    min-height: 1rem;
+    flex-grow: 1;
+} */
+
+.grandparent{
+    background-color: hsl(0, 50%, 50%);
+    flex-direction: column;
+}
+
+.parent{
+    background-color: hsl(100, 50%, 50%);
+}
+
+.child{
+    background-color: hsl(200, 50%, 50%);
+}
+
+.bg-image{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.countdown{
+    font-size: 250px;
+    color: white;
+    position: fixed;
+    top: 30%;
+    left: 41%;  
+}
+
+#btn-click, .small{
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.small{
+    font-size: 24px;
+}
+
+.big{
+    font-size: 48px;
+}
+
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  .content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+    .btn-hide {display: none;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+  
+  .hide-sidebar {
+      display: none;
+  }
+
+  .move-content{
+      margin-left: 0;
+  }
+
+.btn-increase, 
+.btn-decrease, 
+.main-heading, 
+.mouse-btn, 
+.mouse-event,
+.btn-danger,
+.btn-primary {
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.list-btn {
+    margin-left: 5%;
+}
+ 
+.list-item {
+    margin-left: 10px;
+}
+
+.list-item > span {
+    font-weight: bold;
+    margin-left: 330px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 2px solid #000;
+}
+
+.list-item > span:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.input-field{
+    font-size: 15px;
+    width: 100%;
+    border-radius: 3px;
+    margin-left: 42%;
+}
+
+.main-heading{
+    font-weight: bold;
+}
+
+.first-point{
+    font-weight: bold;
+    font-size: 40px;
+    position: fixed;
+    top: 50%;
+    left: 16%;
+}
+
+.second-point{
+    font-weight: bold;
+    font-size: 40px;
+    position: fixed;
+    top: 50%;
+    left: 49%;
+}
+
+.third-point{
+    font-weight: bold;
+    font-size: 40px;
+    position: fixed;
+    top: 50%;
+    left: 82%;
+}
+
+#remove-spaces{
+    padding: 0;
+    margin: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#remove-spaces > .card {
+    border-radius: 5px;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.30), 0 8px 5px rgba(0,0,0,0.22);
+}
+
+.col-border{
+    border: 3px solid #000;
+}
+
+.card{
+    margin: 10px;
+    box-shadow:  0 5px 8px rgba(0,0,0,0.30), 0 8px 5px rgba(0,0,0,0.22);
+}
+
+.watch-image{
+    width: 100%;
+    height: 100%;
+}
+
+.watch-clock{
+    font-size: 27px;
+    color: #fff;
+    font-weight: bold;
+    position: fixed;
+    top: 31%;
+    left: 11.5%;
+}
+
+.watch-heart{
+    color: #ca3d22;
+    font-weight: bold;
+    position: fixed;
+    top: 25%;
+    left: 14.5%;
+}
+
+.heart-rate{
+    font-size: 40px;
+    color: #fff;
+}
+
+.heart > i {
+    font-size: 50px;
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heartbeat {
+    0% { font-size: 52px; }
+    25% { font-size: 50px; }
+    50% { font-size: 52px; }
+    75% { font-size: 50px; }
+    100% { font-size: 52px; }
+}
+
+.watch-heading{
+    margin: 40px 0 0 0;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.product-description{
+    margin: 15px 0 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: arial;
+    color: #333;
+}
+
+.content-card{
+    border-left: 1px solid #ccc;
+    padding: 0px 0px 0px 50px;
+}
+
+.heartbeat,
+.digital{
+    text-transform: capitalize;
+    margin: 70px 0 0 0;
+    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.heartbeat:hover,
+.digital:hover{
+    color: #fff;
+    background-color: #000;
+}
+
+.redbtn,
+.blackbtn,
+.purplebtn,
+.pinkbtn,
+.bluebtn{
+    margin: 40px 5px 0px 0px; 
+    height: 70px;
+    width: 70px;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+}
+
+.redbtn{
+    background-color: #ca3d22;
+}
+
+.purplebtn{
+    background-color: #8a5362;
+}
+
+.blackbtn{
+    background-color: #23211f;
+}
+
+.pinkbtn{
+    background-color: #e9c7be;
+}
+
+.bluebtn{
+    background-color: #565681;
+}
+
+td {
+    border: 1px solid #000;
+}
+
+li{
+    border: 1px solid #284b63;
+    border-left: 8px solid #284b63;
+    border-radius: 0 25px 25px 0;
+    padding: 10px;
+    margin: 5px;
+    list-style-type: none;
+    background-color: #fff;
+}
+
+.alter-li{
+    box-shadow: 0 2px 3px rgba(0,0,0,0.30), 0 3px 2px rgba(0,0,0,0.22);
+}
+
+.add-title {
+    width: 60%;
+    border-radius: 7px 0 7px 0;
+    height: 40px;
+}

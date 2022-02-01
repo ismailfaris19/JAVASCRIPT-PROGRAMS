@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| JS EXERCISE |</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link href="./style/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="./style/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- <div>
+    <span title="hello" id="hi" class="hi">Hello</span>
+    <span id="bye" data-test="tata" data-first-name="faris">Bye</span>
+</div> -->
+<!-- <div id="demo"></div> -->
+
+<!--JavaSript DOM Crash Course-->
+
+<!-- <header id="main-header" class="bg-success text-white p-4 mb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 id="header-title">
+                    ITEM LISTER
+                </h1>
+            </div>
+            <div class="col-md-6 align-self-center">
+                <input type="text" class="form-control" id="filter" placeholder="Search...">
+            </div>
+        </div>
+    </div>
+</header> -->
+<!-- <div class="container">
+    <div id="main" class="card card-body">
+        <h2 class="title text-center">ADD ITEM</h2>
+        <form id="addForm" class="form-inline mb-3">
+            <input type="text" class="form-control mr-2" style="width: 87%" id=> -->
+            <!-- <select class="form-control mr-2">
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+            </select> -->
+            <!-- <input type="submit" class="btn btn-dark" value="submit">
+        </form>
+        <h2 class="title text-center">ITEMS</h2>
+        <ul id="items" class="list-group">
+            <li class="list-group-item">item 1 <button class="btn btn-danger btn-sm float-right delete"> X </button></li>
+            <li class="list-group-item">item 2 <button class="btn btn-danger btn-sm float-right delete"> X </button></li>
+            <li class="list-group-item">item 3 <button class="btn btn-danger btn-sm float-right delete"> X </button></li>
+            <li class="list-group-item">item 4 <button class="btn btn-danger btn-sm float-right delete"> X </button></li>
+        </ul> -->
+        <!-- <button class="btn btn-dark btn-block" id="button">Click Here</button>
+        <br>
+        <div id="box" style="width: 100%; height: 200px; background-color: #f4f4f4"></div>
+        <br>
+        <div id="output"></div> -->
+    <!-- </div>
+</div> -->
+
+<!--JavaScript DOM Traversal-->
+
+<!-- <div class="grandparent" id="grandparent">
+    <div class="parent">
+        <div class="child" id="child-one"></div>
+        <div class="child" id="child-two"></div>
+    </div>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</div> -->
+
+<!--Udemy - JavaScript - Basics to Advanced [step by step (2021)]-->
+
+<!-- countdown with some css effects -->
+
+<!-- <img src="/assets/images/venom.jpg" alt="Vector Background" id="bg-image" class="bg-image">
+<h1 id="countdown" class="countdown">10</h1> -->
+<!-- <div class="row" style="border: none">
+    <div class="col-md-6" style="border: none">
+        <button class="btn-primary" id="btn-click">click me</button>
+    </div>
+</div>
+<div class="row" style="border: none">
+    <div class="col-md-6" style="border: none">
+        <h1 id="main-heading" class="small">
+            add / remove class
+        </h1>
+    </div>
+</div> -->
+
+<!-- ADD / REMOVE CLASS -->
+<!-- <div class="sidebar" id="sidebar">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+</div>
+<div class="content" id="content">
+    <h2>Responsive Sidebar Example</h2>
+    <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
+    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+    <h3>Resize the browser window to see the effect.</h3>
+    <button class="btn-primary btn-hide" id="btn-click">SIDEBAR</button>
+</div> -->
+
+<!-- Getting Styles -->
+<!-- <div class="row">
+    <div class="col">
+        <button class="btn-danger btn-decrease" id="btn-decrease">Font -</button>
+    </div>
+    <div class="col">
+        <button class="btn-primary btn-increase" id="btn-increase">Font +</button>
+    </div>
+</div>
+<div class="row" style="border: none">
+    <div class="col-md-12">
+        <h1 id="main-heading" class="main-heading">
+            increase / decrease font size
+        </h1>
+    </div>
+</div> -->
+
+<!-- Keyboard Events -->
+<!-- <div class="card">
+<form id="login-form">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="username" class="form-control" id="username" placeholder="Enter username" required>    
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+</div> -->
+
+<!-- Mouse Events -->
+<!-- <div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-primary mouse-btn" id="top-btn">Click Me!!!</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col" id="over">
+        <h3 class="mouse-event">MOUSEOVER</h3>
+        <p class="first-point">0</p>
+    </div>
+    <div class="col" id="enter">
+        <h3 class="mouse-event">MOUSEENTER</h3>
+        <p class="second-point">0</p>
+    </div>
+    <div class="col" id="move">
+        <h3 class="mouse-event">MOUSEMOVE</h3>
+        <p class="third-point">0</p>
+    </div>
+</div> -->
+
+<!-- Create HTML Elements -->
+<!-- Create HTML Elements Challenge -->
+<!-- <div class="row" style="margin-top: 30px; padding: 0;">
+    <div class="col-md-6" style="margin: 0; padding: 0;">
+        <input type="text" id="add-item" class="input-field">
+    </div>
+    <div class="col-md-6" style="margin: 0; padding: 0;">
+        <button class="btn btn-info list-btn" id="add-btn">Add Item</button>
+        <button class="btn btn-info list-btn" id="reset-btn">Reset</button>
+    </div>
+</div>
+<ul id="todo-list">
+<div class="row" id="remove-spaces">
+    <div class="col" id="remove-spaces">
+        <div class="card">
+            <li class="list-item" id="item1">Item 1</li>
+            <li class="list-item" id="item1">APPLE<span class="del">X</span></li>       
+        </div>
+    </div>
+</div>
+<div class="row" id="remove-spaces">
+    <div class="col" id="remove-spaces">
+        <div class="card">
+            <li class="list-item" id="item">Item 2</li>
+            <li class="list-item" id="item2">GRAPES<span class="del">X</span></li>
+        </div>
+    </div>
+</div>
+</ul> -->
+
+<!-- Update and Delete HTML Elements -->
+<!-- <div class="row" style="margin-top: 30px; padding: 0;">
+    <div class="col-md-6" style="margin: 0; padding: 0;">
+        <input type="text" id="add-item" class="input-field">
+    </div>
+    <div class="col-md-6" style="margin: 0; padding: 0;">
+        <button class="btn btn-info list-btn" id="add-btn">Add Item</button>
+        <button class="btn btn-info list-btn" id="update-btn">Update Item</button>
+        <button class="btn btn-info list-btn" id="remove-btn">Remove Item</button>
+    </div>
+</div>
+<ul id="todo-list">
+<div class="row" id="remove-spaces">
+    <div class="col" id="remove-spaces">
+        <div class="card">
+            <li class="list-item" id="item1">Item 1</li>
+        </div>
+    </div>
+</div>
+<div class="row" id="remove-spaces">
+    <div class="col" id="remove-spaces">
+        <div class="card">
+            <li class="list-item" id="item2">Item 2</li>
+        </div>
+    </div>
+</div>
+</ul> -->
+
+<!-- Mini Project 1 - Smartwatch Showcase -->
+<!-- <div class="card">
+    <div class="row">
+        <div class="col-4">
+            <img src="./images/red.png" id="watch-image" class="watch-image">
+            <div class="watch-clock" id="watch-screen">
+                <span id="digital-watch"></span>
+                <span id="heart" class="heart">
+                    <i class="fa fa-heartbeat" aria-hidden="true"></i><br>
+                    <p id="heart-rate" class="heart-rate">72</p>
+                </span>
+            </div>
+        </div>
+        <div class="col-8 content-card">
+            <h1 id="watch-heading" class="watch-heading">SMART WATCH</h1>
+            <p class="product-description">Fire-Boltt Ring Bluetooth Calling Smartwatch with <br> SpO2 & 1.7” Metal Body with Blood Oxygen Monitoring,<br> Continuous Heart Rate, Full Touch &<br> Multiple Watch Faces (Black), M (BSW005)</p>
+            <button class="digital" id="digital">clock</button>
+            <button class="heartbeat" id="heartbeat">heartbeat</button><br>
+            <button id="redbtn" class="redbtn"></button>
+            <button id="blackbtn" class="blackbtn"></button>
+            <button id="bluebtn" class="bluebtn"></button>
+            <button id="pinkbtn" class="pinkbtn"></button>
+            <button id="purplebtn" class="purplebtn"></button>
+        </div>
+    </div>
+</div> -->
+
+<!-- Just a try -->
+<!-- <button class="btn btn-primary" id="btn-open">open</button>
+<button class="btn btn-danger" id="btn-close">close</button>
+<div class="card" id="card">
+    <div class="row" id="row">
+        <div class="col-12" id="table-one">
+            <table class="table table-striped">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div> -->
+
+<!-- Let's play with Regex -->
+<!-- <form id="login-form">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter username">
+      <small id="uname-error" class="form-text text-danger"></small>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter Password">
+      <small id="pass-error" class="form-text text-danger"></small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->
+
+<!-- XMLHttpRequest & jQuery Playground -->
+<!-- <div class="container" style="text-align:center;">
+    <input type="text" id="add-title" class="add-title">
+    <button class="btn btn-info" id="add-btn">Add Title</button>
+    <button class="btn btn-primary" id="upd-btn">Update</button>
+    <ul class="titles" id="titles"></ul>
+</div> -->
+
+<script type="text/javascript" src="../DOM.js"></script>
+<!-- <script type="text/javascript" src="../Async.js"></script> -->
+<!-- <script type="text/javascript" src="../CallbackAndSetTimeout.js"></script> -->
+<!-- <script type="text/javascript" src="../JSExercise.js"></script> -->
+<!-- <script type="text/javascript" src="../JSBasics.js"></script> -->
+<!-- <script type="text/javascript" src="../Promises.js"></script> -->
+<!-- <script type="text/javascript" src="../Strings.js"></script> -->
+<!-- <script type="text/javascript" src="../AjaxAndjQuery.js"></script> -->
+<script src="https://use.fontawesome.com/3ddf7b9645.js"></script>
+</body>
+</html>

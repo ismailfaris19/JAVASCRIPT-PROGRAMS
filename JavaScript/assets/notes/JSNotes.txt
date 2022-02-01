@@ -1,0 +1,519 @@
+~ Js created in just 10 days.
+
+~ History of JS:
+          1997 - ECMAScript v1
+          1998 - ECMAScript v2
+          1999 - ECMAScript v3
+          2009 - ECMAScript v5
+          2011 - ECMAScript v5.1
+          2015 - ECMAScript 2015(ES6)
+          2016 - ECMAScript 2016(ES7)
+          2017 - ECMAScript 2017(ES8)
+          2018 - ECMAScript 2018(ES9)
+
+~ ES6 Features: 
+        1) using let and const
+        2) Template strings
+        3) Arrow functions
+        4) Rest and Spread Operators
+        5) Destructuring
+        6) Array functions: find() & findIndex()
+        7) Classes
+        8) Promises
+        and much more...
+
+~ Babel - It is a preprocessor for JS/ECMAScript. it is used to convert ES6+ code into a backward compatible verson of JavaScript that can be run by older browsers.
+
+~ Modern WebApps such as facebook, netflix and instagram running JS.
+
+~ Names in JavaScript are case-sensitive.
+
+~ Arguments vs Parameters: Arguments are the real values passed to the function. parameters are the names listed in the function's definition.
+                          Eg: funtion getName(name){ ---> parameters
+                                return name;
+                              }
+                              getName('John'); --->arguments
+
+~ Hoisting - This mechanism where variable and function can be used before declaring.
+
+~ In promise, then() is called when the resolve is executed and catch() is called when the reject is executed.
+
+~ Syntax for Regular Expression (regex) - /pattern-string/flags
+
+~ "pattern-string" - represents that where we define that strings this pattern should match. 
+
+~ "/" - represents the start and end of the pattern-string.
+
+~ flags - are used to define whether we want the search to be case-sensitive or not, or whether we want just the first result or all the results.
+
+~ Sets and Ranges inside [] means to search for any character among given values.
+
+~ Sets - [ABC] which means any of the 3 characters. Eg: 'A', 'B', 'C'.
+          String : Air Birm Circle
+          Pattern : [ABC]irm
+
+~ Ranges - [A-Z] which means range from A to Z and [0-9] which means range from 0 to 9.
+            String : Same Name Fame
+            Pattern : [A-Z]ame
+
+~ Qualifiers - can decide how many times a value should be selected.
+                Pattern : [\d]{3}
+
+~ Syntax of Regex in JavaScript : /{pattern}/{flags} (or) new RegExp("pattern", "flags").
+
+~ Regex Methods in JavaScript : 
+        1) str.search(pattern) - returns string position of 1st match.
+        2) pattern.test(str) -  returns true if there is a match or otherwise returns false.
+        3) str.match(pattern) - returns the matched strings.
+                                If the flag is not set to global then it returns only the first match.
+                                But if the flag is set to global then it returns an array of the matched strings.
+
+~ /that/g - it search for all "that" with case-sensitive.
+
+~ /that/gi - it search for all "that" with case-insensitive.
+
+~ /[a-z][0-9]/gi - alphabets followed by numbers.
+
+~ /[a-z][A-Z]/gi - small letter followed by capital letter.
+
+~ /[a-zA-Z]/gi - small letters or capital letters.
+
+~ /[^0-9]/g - is to select a characters other than numbers.
+
+~ /[\d]/g - is a character class to select number or we can use /[0-9]/g also.
+
+~ /[\D]/g - is a character class to select alphabets and special characters.
+
+~ /[\w]/g - is a character class to select alphabets and numbers.
+
+~ /[\W]/g - is a character class to select whitespaces and special characters.
+
+~ /[\s]/g - is a character class to select whitespaces.
+
+~ /[\S]/g - is a character class to select alphabets, special characters and numbers except whitespaces.
+
+~ /[\d]{3}/g - is a character class with qualifiers. Eg: 234
+
+~ /[\d]{1, 3}/g - is a character class with qualifiers(starting, ending). Eg: 1, 32, 768
+
+~ /[\d]{1,}/g or /[\d]+/g - is a character class with qualifiers(starting, infinity) or with "+" symbol. Eg: 123456789
+
+~ /#[\w]{3}/g - which means start with "#" and followed by length of three or less than three alphabets or numbers.
+
+~ /^#[\w]{3}/g - which means string have to start with "#" and followed by length of three or less than three alphabets or numbers.
+
+~ /#[\w]{3}$/g - which means string have to start with "#" and followed by length of three alphabets or numbers must.
+
+~ /^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]$/g - for checking valid PAN number. Eg: PANQR4628D
+
+~ /[0-9]{0,}/g or /[0-9]*/g - to get set of numbers with spaces. Eg: 1000, ,100,10, ,200
+
+~ /[0-9]*[\S]/g - to get set of numbers with spaces without spaces. Eg: 1000,100,10,200
+
+~ /https{0,1}/g or /https?/g - to get https or http from URL.
+
+~ DOM: Tree of nodes/elements created by the browser.
+
+~ All the global JS objects are automatically becomes the member of Window ObJect.
+
+~ Window object contains document, history, screen, navigator and location objects.
+
+~ Window object gives us access to some methods like setTimeout, setInterval, alert, confirm, prompt, open and close.
+
+~ Screen object gives us access the properties of the screen.
+
+~ Navigator object conatains information about the browser where your application is running.
+
+~ navigator.userAgent - to get string then we have to parse that string to get details about the browser and operating system. Parse using https://developers.whatismybrowser.com/useragents/parse/
+
+~ History object represents an array of URLs visited by the user. Our
+
+~ back() - it loads the previous page from the browser history.
+
+~ forward() - it loads the next page from the browser history.
+
+~ Location object can be used to get the  details of the current page address. It can also redirect the browser to a new page in the same browser tab.
+
+~ getElementById and getElementClassName are twice much faster than querySelector and querySelectorAll.
+
+~ Form Events:
+    * change - this event is triggered when the content of an input field is changed or selects a value from the dropdown etc.
+    * input - this event is triggered when do any action on the input field Eg: typing
+    * focus - this event is triggered when the input field is focused.
+    * blur - this event is triggered when the input field loses focus.
+    * submit - this event is triggered when the submit button is clicked.
+
+~ Keyboard Events:
+    * keydown - this event is triggered when key is pressed on the keyboard.
+    * keyup - this event is triggered when key is released on the keyboard.
+    * keypress - this event is triggered when key is pressed on the keyboard except Shift, Funtion and CapsLock.
+
+~ Mouse Events: 
+    * mousedown - this event is triggered when either left or right mouse button is pressed on the html element.
+    * mouseup - this event is triggered when either left or right mouse button is released on the html element.
+    * click - this event is triggered when left mouse button is pressed and released on the html element.
+    * dblclick - this event is triggered when left mouse button is double clicked on the same html element.
+    * mouseover - this event is triggered when the mouse pointer enters  the html element and its child element.
+    * mouseenter - this event is triggered when the mouse pointer enters the html element.
+    * mousemove - this event is triggered every time the mouse pointer is moved over the html element. 
+
+~ parentNode(ul) -> elementNode(li) -> textNode(text content inside li tag). Eg: <ul><li>hello</li></ul>
+
+~ NodeJS is server side run-time.
+
+~ ExpressJS is framework for developing web applications.
+
+~ PUT is a method of modifying resource where the client sends data that updates the entire resource if it exists or creates new if it does not exist. 
+
+~ PATCH is a method of modifying resources where the client sends partial data that is to be updated without modifying the entire data.
+
+~ URL - "https://www.udemy.com/course"
+  (i) In URL, GET method
+  (ii) In URL, "https://www.udemy.com" - it points to the backend server.
+  (iii) In URL, "/course" - it tells backend what is requested by the frontend.
+
+~ JSON(JavaScript Object Notation) - a text form that makes it easy to share data between client and server.
+
+~ Response Codes(status):
+    1) 200 - success(request was successful & data received at frontend)
+    2) 400 - bad request(backend did not understand the request)
+    3) 401 - unauthorized(user is not authorized to access the response data)
+    4) 404 - not found(url is not found by the backend)
+    5) 500 - something went wrong(something failed backend & request cannot be completed)
+
+~ AJAX(Asynchronous JavaScript And XML) - It allows web pages to be updated asynchronously by exchanging data with the backend.
+
+~ AJAX uses a browser built-in XMLHttpRequest object to make requests to the backend.
+
+~ readyState property holds the state of the XMLHttpRequest.
+    UNSENT - it initiated but open() not called yet (value 0).
+    OPENED - it means that open() called (value 1).
+    HEADERS RECEIVED - it means send() called (value 2).
+    LOADING - it means request is being processed (value 3).
+    DONE - it means request is completed and the response is ready (value 4).
+    
+~ onreadystatechange property defines a function to be executed when the readyState changes.
+
+~ jQuery - it is JS library and it was supported by all the browsers.
+         - HTML/DOM manipulation.
+         - CSS manipulation.
+         - Handling HTML Events.
+         - Effects and animations.
+         - Making AJAX calls.
+
+~ script for jQuery - <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+~ jQuery syntax - $(<selector>).method()
+                  $ - used to access the jQuery.
+                  selector - used to find the HTML element.
+                  method() - used to perform some action on the element.
+
+~ $('p') - this statement will select all the HTML elements with paragraph tag and will return it as a list of objects.
+
+~ $('p:first') (or) $('p').first() - this statement will select first paragraph returned by $('p') selector.
+
+~ In jQuery, JS's innerHTML is html() method. We can get the content(text or more HTML elements) of the HTML element.
+        Eg: $(<selector>).html()
+            $(<selector>).html(childElement)
+
+~ In jQuery, css() - it accepts the CSS property name as an argument andit returns the value of the first matched HTML element.
+        Eg: $(<selector>).css(<property-name>)
+
+~ In jQuery, we can use event name followed by paranthesis.
+        Eg: $(<selector>).event-name(function() {
+             // it happens when the event is triggered.
+        });
+
+~ In jQuery, we can access methods to HTTP calls. The callback function is called when the request is completed. we don't have to create XMLHttpRequest objects or listen to status changes. jQuery handle everything.
+        Eg: $.get(URL, callback);
+
+~ Primitives: When you access a primitive type you work directly on its value.
+
+# string, number, boolean, null, undefined, symbol, bigint.
+
+~ Complex: When you access a complex type you work on a reference to its value.
+
+# object, array, function.
+
+~ object and map do not allow duplicates.
+
+~ Use const for all of your references; avoid using var.
+
+~ If you must reassign references, use let instead of var. 
+
+~ both let and const are block-scoped, whereas var is function-scoped.
+
+# {
+    let a = 1;
+    const b = 1;
+    var c = 1;
+  }
+  console.log(a); // ReferenceError
+  console.log(b); // ReferenceError
+  console.log(c); // Prints 1
+
+~ Use the literal syntax for object creation.
+
+# const item = {};
+
+~ Use computed property names when creating objects with dynamic property names.
+
+# function getKey(k) {
+  return `a key named ${k}`;
+  }
+
+  // good
+    const obj = {
+      id: 5,
+      name: 'San Francisco',
+      [getKey('enabled')]: true,
+    };
+
+~ Use object method shorthand.
+
+# // good
+    const atom = {
+    value: 1,
+
+    addValue(value) {
+      return atom.value + value;
+     },
+    };
+
+~ Use property value shorthand.
+
+# const lukeSkywalker = 'Luke Skywalker';
+  // good
+    const obj = {
+      lukeSkywalker,
+    };
+
+~ Group your shorthand properties at the beginning of your object declaration.
+
+# const anakinSkywalker = 'Anakin Skywalker';
+  const lukeSkywalker = 'Luke Skywalker';
+  // good
+    const obj = {
+      lukeSkywalker,
+      anakinSkywalker,
+      episodeOne: 1,
+      twoJediWalkIntoACantina: 2,
+      episodeThree: 3,
+      mayTheFourth: 4,
+    };
+
+~ Only quote properties that are invalid identifiers.
+
+# // good
+    const good = {
+      foo: 3,
+      bar: 4,
+      'data-blah': 5,
+    };
+
+~ Do not call Object.prototype methods directly, such as hasOwnProperty, propertyIsEnumerable, and isPrototypeOf.
+
+# // bad
+    console.log(object.hasOwnProperty(key));
+
+  // good
+    console.log(Object.prototype.hasOwnProperty.call(object, key));
+
+  // best
+    const has = Object.prototype.hasOwnProperty; // cache the lookup once, in module scope.
+    console.log(has.call(object, key));
+
+                    /* or */
+
+    import has from 'has'; // https://www.npmjs.com/package/has
+    console.log(has(object, key));
+
+~ Prefer the object spread syntax over Object.assign to shallow-copy objects. Use the object rest parameter syntax to get a new object with certain properties omitted.
+
+~ Use the literal syntax for array creation.
+
+# const items = [];
+
+~ Use Array#push instead of direct assignment to add items to an array.
+
+~ Use array spreads ... to copy arrays.
+
+# const itemsCopy = [...items];
+
+~ To convert an iterable object to an array, use spreads ... instead of Array.from.
+
+# // good
+    const nodes = Array.from(foo);
+
+  // best
+    const nodes = [...foo];
+
+~ Use single quotes '' for strings.
+
+# // good
+  const name = 'Capt. Janeway';
+
+~ Use named function expressions instead of function declarations.
+
+~ Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears.
+
+~ Always put default parameters last.
+
+# function handleThings(name, opts = {}) { }
+
+~ Never use the Function constructor to create a new function.
+
+~ Spacing in a function signature.
+
+# // bad
+    const f = function(){};
+    const g = function (){};
+    const h = function() {};
+
+  // good
+    const x = function () {};
+    const y = function a() {};
+
+~ Class methods should use this or be made into a static method unless an external library or framework requires using specific non-static methods. Being an instance method should indicate that it behaves differently based on properties of the receiver.
+
+# // good - this is used
+    class Foo {
+      bar() {
+        console.log(this.bar);
+      }
+    }
+  
+  // good - constructor is exempt
+    class Foo {
+      constructor() {
+         // ...
+      }
+    }
+  
+  // good - static methods aren't expected to use this
+    class Foo {
+      static bar() {
+        console.log('bar');
+      }
+    }
+
+~ All JavaScript objects inherit properties and methods from a prototype:
+    Date objects inherit from Date.prototype
+    Array objects inherit from Array.prototype
+    Person objects inherit from Person.prototype
+
+~ The Object.prototype is on the top of the prototype inheritance chain:
+    Date objects, Array objects, and Person objects inherit from Object.prototype.
+
+~ Only import from a path in one place.
+
+# import foo, { named1, named2 } from 'foo';
+
+~ Do not export mutable bindings.
+
+# // bad
+    let foo = 3;
+    export { foo };
+
+  // good
+    const foo = 3;
+    export { foo };
+
+~ In modules with a single export, prefer default export over named export.
+
+~ Put all imports above non-import statements.
+
+~ Multiline imports should be indented just like multiline array and object literals.
+
+# // good
+    import {
+      longNameA,
+      longNameB,
+      longNameC,
+      longNameD,
+      longNameE,
+    } from 'path';
+
+~ Disallow Webpack loader syntax in module import statements.
+
+# import fooSass from 'foo.scss';
+
+~ Do not include JavaScript filename extensions.
+
+~ Don’t use iterators. Prefer JavaScript’s higher-order functions instead of loops like for-in or for-of.
+
+~ To create a generator, we need a special syntax construct: function*, so-called “generator function”.
+
+~ "generator function" creates "generator object".
+
+~ The main method of a generator is next(). The result of next() is always an object with two properties: {value: 1, done: false}
+
+~ The actions are FIXME: -- need to figure this out or TODO: -- need to implement.
+
+# // FIXME: shouldn’t use a global here
+    total = 0;
+
+  // TODO: total should be configurable by an options param
+    this.total = 0;
+
+~ A base filename should exactly match the name of its default export.
+
+~ Acronyms and initialisms should always be all uppercased, or all lowercased.
+
+~ Do not use JavaScript getters/setters as they cause unexpected side effects and are harder to test, maintain, and reason about.
+
+# // bad
+    class Dragon {
+      get age() {
+        // ...
+      }
+
+      set age(value) {
+        // ...
+      }
+    }
+
+  // good
+    class Dragon {
+      getAge() {
+        // ...
+      }
+
+      setAge(value) {
+        // ...
+      }
+    }
+
+~ For DOM queries use Cascading $('.sidebar ul') or parent > child $('.sidebar > ul').
+
+# // good
+    $('.sidebar ul').hide();
+
+  // good
+    $('.sidebar > ul').hide();
+
+  // good
+    $sidebar.find('ul').hide();
+
+~ When you pass a function as an argument, remember not to use parenthesis.
+
+~ producing code : some code that loads the data over a network. Eg: “singer”.
+
+~ consuming code : wants the result of the “producing code” once it’s ready. Many functions may need that result. Eg: “fans”.
+
+~ The function passed to new Promise is called the executor. When new Promise is created, the executor runs automatically. A Promise is a JavaScript object that links producing code and consuming code.
+
+# let promise = new Promise(function(resolve, reject) {
+    // executor (the producing code, "singer")
+  });
+
+~ Its arguments resolve and reject are callbacks provided by JavaScript itself. Our code is only inside the executor.
+
+~ resolve(value) : if the job is finished successfully, with result value.
+
+~ reject(error) : if an error has occurred, error is the error object.
+
+~ The Promise object supports two properties: state and result.
+
+~ Consuming functions can be registered (subscribed) using methods .then, .catch and .finally.
+
