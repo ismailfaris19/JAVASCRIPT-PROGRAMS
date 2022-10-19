@@ -849,3 +849,20 @@ function diagonalDifference(arr) {
     return Math.abs(a - b);
 }
 // console.log(diagonalDifference([[11,2,4], [4,5,6], [10,8,-12]]));
+
+
+
+/* Find the percentage of positive, negative and zero counts */
+function plusMinus(arr) {
+    let  a = 0, b = 0, c = 0, n = arr.length;
+    arr.forEach((item) => {
+        if(Math.sign(item) == 1) a += 1;
+        else if (Math.sign(item) == -1) b += 1;
+        else c += 1;
+    })
+    console.log((a/n).toFixed(6))
+    console.log((b/n).toFixed(6))
+    console.log((c/n).toFixed(6))
+}
+
+// plusMinus([-4, 3, -9, 0, 4, 1])
