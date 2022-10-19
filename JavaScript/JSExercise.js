@@ -866,3 +866,24 @@ function plusMinus(arr) {
 }
 
 // plusMinus([-4, 3, -9, 0, 4, 1])
+
+
+
+/* find the min and max count of an element in an array */
+function miniMaxSum(arr) {
+    let min, max;
+    arr.forEach((item, i) => {
+        let elemArr = arr.filter((num, index) => i != index);
+        let count = elemArr.reduce((a, b) => a + b);
+        if(i == 0){
+            min = count;
+            max = count;
+        } else {
+            min = count < min ? count : min;
+            max = count > max ? count : max;
+        }
+    })
+    console.log(`${min} ${max}`)
+}
+
+// miniMaxSum([5, 5, 5, 5, 5])
