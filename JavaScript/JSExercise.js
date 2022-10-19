@@ -834,3 +834,18 @@ function suffle(S, N){
 let arrNames = ['faris', 'ismail', 'jiyad', 'jasra'];
 arrNames = arrNames.map( item => item[0].toUpperCase() + item.substring(1, item.length) );
 // console.log(arrNames);
+
+
+
+/* Given a square matrix, calculate the absolute difference between the sums of its diagonals.*/
+function diagonalDifference(arr) {
+    var a = 0, b = 0, n = arr.length;
+    for(let i = 0; i < n; i++){
+        for(let j = 0; j < n; j++){
+            if(i == j) a += arr[i][j];
+            if((i + j) == (n - 1)) b += arr[i][j];
+        }
+    }
+    return Math.abs(a - b);
+}
+// console.log(diagonalDifference([[11,2,4], [4,5,6], [10,8,-12]]));
