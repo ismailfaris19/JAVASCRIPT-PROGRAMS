@@ -887,3 +887,64 @@ function miniMaxSum(arr) {
 }
 
 // miniMaxSum([5, 5, 5, 5, 5])
+
+
+
+/* find the re-ordered numbers in an array using swap and reverse */
+function countDownMarks(array) {
+    var downMarks = [];
+    array.forEach((item, i) => { // [1, 5, 4, 3, 2, 6] => [1, 2, 3]
+        if(array[i + 1] < array[i]) downMarks.push(i);
+    });
+    return downMarks;
+}
+
+function almostSorted(arr) {
+    var downMarks = countDownMarks(arr); // [1, 2, 3]
+
+    var newArray, newDownMarks, start, end;
+
+    // try swap
+    if (downMarks.length == 1 ||
+        downMarks.length == 2) {
+
+        newArray = [...arr];
+        start = downMarks.shift();
+        end = (downMarks.length) ? downMarks.shift() + 1 : start + 1;
+
+        swap(newArray, start, end);
+        newDownMarks = countDownMarks(newArray);
+        if (!newDownMarks.length) {
+            console.log("yes");
+            console.log("swap", start + 1, end + 1);
+            return;
+        }
+    }
+
+    // try reverse
+    if (downMarks.length > 2 &&
+        downMarks.length == ((downMarks[downMarks.length - 1] - downMarks[0]) + 1)) { 
+        start = downMarks.shift();
+        end = downMarks.pop() + 1;
+        newArray = reverse(arr, start, end);
+        newDownMarks = countDownMarks(newArray);
+        if (!newDownMarks.length) {
+            console.log("yes");
+            console.log("reverse", start + 1, end + 1);
+            return;
+        }
+    }
+
+    console.log("no");
+}
+
+function swap(array, idx1, idx2) {
+    [array[idx1], array[idx2]] = [array[idx2], array[idx1]]
+}
+
+function reverse(array, idx1, idx2) {
+    return array.slice(0, idx1).concat(array.slice(idx1, idx2 + 1).reverse()).concat(array.slice(idx2 + 1));
+}
+
+// almostSorted([1, 5, 4, 3, 2, 6])
+// almostSorted([4, 2])
