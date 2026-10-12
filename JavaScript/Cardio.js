@@ -31,7 +31,6 @@ function repeatedValue(value) {
 }
 
 // const result = repeatedValue('javascripttttttt');
-
 // console.log(result);
 
 //////////////////////////////////////////////////////////////////////

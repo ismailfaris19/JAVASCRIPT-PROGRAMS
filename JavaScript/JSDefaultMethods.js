@@ -217,7 +217,7 @@ function arrayMethods(type, inputType = 1) {
 
     if (type === "sort") {
         result = result.sort((a, b) => b - a); // Sorts the elements of an array in place and returns the sorted array.
-    }
+    }v
 
     if (type === "fill") {
         result.fill(0, 1, 3); // fill(value, start, end): Fills all the elements of an array from a start index to an end index with a static value.
@@ -342,7 +342,7 @@ function arrayMethods(type, inputType = 1) {
     return result;
 }
 
-// console.log(arrayMethods("from", 1));
+console.log(arrayMethods("copyWithin", 1));
 
 
 
@@ -397,7 +397,6 @@ function objectMethods(type) {
             f: { value: 6, writable: true },
             g: { value: 7, writable: false }
         });
-
         result.f = 10; // Modifiable property
         result.g = 20; // Non-modifiable property
         result = { f: result.f, g: result.g }; // { f: 10, g: 7 }
@@ -661,3 +660,24 @@ function dateMethods(type) {
 }
 
 // console.log(dateMethods("toJSON"));
+
+
+
+/////////////////////// TYPE CHECKING ///////////////////////
+
+function typeChecking(){
+    console.log(typeof null);
+    console.log(typeof {});
+    console.log(typeof []);
+    console.log(typeof "");
+    console.log(typeof 0);
+    console.log(typeof NaN);
+    console.log(typeof undefined);
+    console.log(Boolean(""));
+    console.log(Boolean(" "));
+    console.log(Boolean(0));
+    console.log(Boolean({}));
+    console.log(Boolean([]));
+}
+
+// typeChecking();

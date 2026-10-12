@@ -76,9 +76,9 @@ let str = `hello`;
 /* .substring(start, end) */
 // console.log(str.substring(2, 4), str.substring(4, 2)); // 2nd index to 3rd index
 
-/* .substr(start, end) */
+/* .substr(start, count) */
 // console.log(str.substr(1, 4)); // from the left, get 4 elements from 1st index
-// console.log(str.substr(-3, 2)); // from the right, get 2 elements from 3rd element
+// console.log(str.substr(-3, 2)); // from the right, get 2 elements from 3rd element hello
 
 
 // .replace() - for replace the character or word.
@@ -94,4 +94,4 @@ let str = `hello`;
 
 
 // bitwise NOT trick
-// console.log( ~2 ) // -3, same as (2+1)
+// console.log( ~2 ) // output: -3, same as (~2 => -2-1)
