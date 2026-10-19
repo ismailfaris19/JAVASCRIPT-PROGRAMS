@@ -217,7 +217,7 @@ function arrayMethods(type, inputType = 1) {
 
     if (type === "sort") {
         result = result.sort((a, b) => b - a); // Sorts the elements of an array in place and returns the sorted array.
-    }v
+    }
 
     if (type === "fill") {
         result.fill(0, 1, 3); // fill(value, start, end): Fills all the elements of an array from a start index to an end index with a static value.
@@ -342,7 +342,7 @@ function arrayMethods(type, inputType = 1) {
     return result;
 }
 
-console.log(arrayMethods("copyWithin", 1));
+// console.log(arrayMethods("copyWithin", 1));
 
 
 
@@ -520,6 +520,112 @@ function mathMethods(type, inputType = 1) {
 
 
 
+/////////////////////// SET METHODS ///////////////////////
+
+function setMethods(type) {
+    let result = new Set([1, 2, 3, 4, 5]);
+
+    if (type == "add") {
+        set.add(6);
+    } else if (type == "delete") {
+        set.delete(3);
+    } else if (type == "clear") {
+        set.clear();
+    } else if (type == "has") {
+        return set.has(4);
+    } else if (type == "size") {
+        return set.size;
+    } else if (type == "forOf") {
+        for (const value of result) {
+            console.log(value);
+        }
+        return;
+    } else if (type == "forOfValues") {
+        for (const value of result.values()) {
+            console.log(value);
+        }
+        return;
+    } else if (type == "forOfKeys") {
+        for (const value of result.keys()) {
+            console.log(value);
+        }
+        return;
+    } else if (type == "forEach") {
+        result.forEach(value => {
+            console.log(value);
+        });
+        return;
+    } else if (type == "checkDuplicates") {
+        const arr = [1, 2, 3, 2, 4, 1];
+        const seen = new Set();
+        const duplicates = new Set();
+
+        for (const num of arr) {
+            if (seen.has(num)) {
+                duplicates.add(num);
+            } else {
+                seen.add(num);
+            }
+        }
+
+        console.log([...duplicates]); // [2, 1]
+
+        return;
+    }
+
+    return result;
+}
+
+// console.log(setMethods("checkDuplicates"));
+
+
+
+/////////////////////// SET METHODS ///////////////////////
+
+function mapMethods(type) {
+    const result = new Map([
+        ["a", 10],
+        ["b", 20],
+        ["c", 30]
+    ]);
+
+    if (type == "set") {
+        result.set("d", 40);
+    } else if (type == "delete") {
+        result.delete("c");
+    } else if (type == "clear") {
+        result.clear();
+    } else if (type == "get") {
+        return result.get("a");
+    } else if (type == "has") {
+        return result.has("b");
+    } else if (type == "size") {
+        return result.size;  
+    } else if (type == "forOfKeys") {
+        for (const key of result.keys()) {
+            console.log(key);
+        }
+    } else if (type == "forOfValues") {
+        for (const value of result.values()) {
+            console.log(value);
+        }
+    } else if (type == "forOfKeysValues") {
+        for (const [key, value] of result) {
+            console.log(key, value);
+        }
+    } else if (type == "forEach") {
+        result.forEach((value, key) => {
+            console.log(key, value);
+        });
+    }
+
+    return result;
+}
+
+// console.log(mapMethods("checkDuplicates"));
+
+
+
 /////////////////////// Date METHODS ///////////////////////
 
 function dateMethods(type) {
@@ -665,19 +771,22 @@ function dateMethods(type) {
 
 /////////////////////// TYPE CHECKING ///////////////////////
 
-function typeChecking(){
-    console.log(typeof null);
-    console.log(typeof {});
-    console.log(typeof []);
-    console.log(typeof "");
-    console.log(typeof 0);
-    console.log(typeof NaN);
-    console.log(typeof undefined);
-    console.log(Boolean(""));
-    console.log(Boolean(" "));
-    console.log(Boolean(0));
-    console.log(Boolean({}));
-    console.log(Boolean([]));
+function typeChecking(type){
+    if(type == "check-type") { 
+        console.log(typeof null);
+        console.log(typeof {});
+        console.log(typeof []);
+        console.log(typeof "");
+        console.log(typeof 0);
+        console.log(typeof NaN);
+        console.log(typeof undefined);
+    } else {
+        console.log(Boolean(""));
+        console.log(Boolean(" "));
+        console.log(Boolean(0));
+        console.log(Boolean({}));
+        console.log(Boolean([]));
+    }
 }
 
-// typeChecking();
+// typeChecking("check-type");
